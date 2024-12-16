@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Emoji Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="clouds-top"></div>
+  <div id="clouds-mid"></div>
+  <div id="clouds-bottom"></div>
+
+  <header>
+    <h1>Emoji Planner</h1>
+    <div style="display: flex; align-items: center;">
+      <div class="time-display" aria-label="Huidige tijd"></div>
+      <button class="reset-alles-btn" aria-label="Reset alle placeholders">reset alles</button>
+    </div>
+  </header>
+
+  <section class="day-sections" aria-label="Dagindeling">
+    <div class="section-block" aria-label="Ochtend sectie">
+      <h2>Ochtend</h2>
+      <div class="placeholder-row">
+        <div class="placeholder empty" aria-label="Lege placeholder" tabindex="0"></div>
+        <button class="add-btn" aria-label="Voeg nieuwe placeholder toe">+</button>
+      </div>
+    </div>
+    <div class="section-block" aria-label="Middag sectie">
+      <h2>Middag</h2>
+      <div class="placeholder-row">
+        <div class="placeholder empty" aria-label="Lege placeholder" tabindex="0"></div>
+        <button class="add-btn" aria-label="Voeg nieuwe placeholder toe">+</button>
+      </div>
+    </div>
+    <div class="section-block" aria-label="Avond sectie">
+      <h2>Avond</h2>
+      <div class="placeholder-row">
+        <div class="placeholder empty" aria-label="Lege placeholder" tabindex="0"></div>
+        <button class="add-btn" aria-label="Voeg nieuwe placeholder toe">+</button>
+      </div>
+    </div>
+  </section>
+
+  <button class="huiswerk-btn" aria-label="Schakel huiswerkmodus in">Huiswerk</button>
+
+  <div class="search-container" aria-label="Zoek en filter emojis">
+    <input type="text" class="search-bar" placeholder="Zoek emojis..." aria-label="Zoek emojis op naam">
+  </div>
+
+  <main aria-label="Emoji deck">
+    <div class="emoji-deck" aria-live="polite"></div>
+  </main>
+
+  <div class="reward-popup">
+    <div class="reward-content">
+      <div class="reward-text">Goed Gedaan!</div>
+      <div class="reward-emoji">🎂</div>
+    </div>
+  </div>
+
+  <div class="confetti-container"></div>
+
+  <div class="tutorial-popup">
+    <div class="tutorial-content">
+      <h2 class="tutorial-title">Welkom bij Emoji Planner!</h2>
+      <p class="tutorial-step">👻 Deze geest laat zien hoe je emoji’s kunt slepen en plaatsen!</p>
+      <p class="tutorial-step">👉 Deze vinger laat zien hoe je dubbel tikt om te verwijderen!</p>
+      <p class="tutorial-step">💡 Leer hoe je "reset alles" gebruikt om je plan te legen!</p>
+      <p class="tutorial-step">Volg de pijlen en animaties om alle functies te begrijpen.</p>
+      <button class="tutorial-close" aria-label="Sluit de tutorial">Begrepen!</button>
+    </div>
+  </div>
+
+  <div class="tutorial-overlays">
+    <div class="ghost-overlay">👻</div>
+    <div class="finger-overlay">👉</div>
+    <div class="speech-bubble">Druk op deze knop om alle emoji’s in één keer te verwijderen</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
